@@ -1,3 +1,7 @@
+## [5.0.1] - March 12, 2023
+
+* Added nullable schema support in schmea_helper
+
 ## [5.0.0+5] - March 7, 2023
 
 * Automated dependency updates

@@ -73,6 +73,10 @@ class SchemaHelper {
         'type': 'string',
       };
 
+  static Map<String, dynamic> get nullSchema => const {
+        'type': 'null',
+      };
+
   static dynamic arraySchema(
     String id, {
     bool includeObject = false,
@@ -146,5 +150,12 @@ class SchemaHelper {
     }
 
     return result;
+  }
+
+  static Map<String, List<Map<String, dynamic>>> nullable(
+      Map<String, dynamic> schema) {
+    return {
+      'anyOf': [nullSchema, schema]
+    };
   }
 }
